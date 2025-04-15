@@ -1,72 +1,76 @@
-/* style.css */
+/* Global Styles */
 body {
-  font-family: Arial, sans-serif;
-  background-color: #141414;
-  color: #fff;
   margin: 0;
-  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #2F496E; /* fond principal */
+  color: #F4EADE; /* texte principal */
 }
 
 header {
+  background-color: #2988BC; /* bandeau en haut */
+  padding: 1rem;
   text-align: center;
-  padding: 20px;
-  background-color: #111;
+  color: #F4EADE;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
-header h1 {
-  font-size: 2.5rem;
+h1 {
+  margin: 0;
+  font-size: 2rem;
 }
 
+/* Grid of Cards */
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 20px;
-  padding: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 1rem;
+  padding: 2rem;
 }
 
+/* Film Cards */
 .card {
-  background-color: #333;
-  border-radius: 8px;
+  background-color: #F4EADE;
+  border-radius: 12px;
   overflow: hidden;
-  cursor: pointer;
-  transition: transform 0.3s ease;
+  text-align: center;
+  text-decoration: none;
+  color: #2F496E;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
 }
 
 .card img {
   width: 100%;
   height: auto;
-}
-
-.card:hover {
-  transform: scale(1.05);
+  display: block;
 }
 
 .card p {
-  text-align: center;
-  font-size: 1rem;
-  padding: 10px;
-  background-color: #222;
-  margin: 0;
-}
-
-/* Pour un effet de survol plus intense */
-.card:hover p {
-  background-color: #111;
-}
-.card {
-  text-decoration: none; /* enlève le soulignement */
-  color: #e50914; /* rouge Netflix */
-}
-
-.card p {
-  color: #e50914; /* texte du titre du film */
-  margin-top: 0.5rem;
+  margin: 0.5rem;
   font-weight: bold;
+  color: #2988BC;
 }
 
-/* Pour que le lien ne change pas de couleur après clic */
+/* Highlight visited films */
 .card:visited p {
-  color: #e50914;
+  color: #ED8C72;
 }
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+  .grid {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    padding: 1rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+}
+
 
 
