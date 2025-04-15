@@ -14,7 +14,7 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
     // Vérifier les identifiants
     if (isset($users[$username]) && $users[$username] == $password) {
         $_SESSION['user'] = $username;
-        header('Location: films.html');  // Rediriger vers la page des films si l'authentification réussie
+        header('Location: index.html');  // Rediriger vers la page des films si l'authentification réussie
         exit();
     } else {
         $error_message = "Identifiants invalides.";
@@ -28,7 +28,7 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Connexion - Nkrmov</title>
-  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
