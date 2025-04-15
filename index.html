@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Ma plateforme de vidéos</title>
+  <link href="https://vjs.zencdn.net/7.20.3/video-js.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>🎬 Ma plateforme de streaming</h1>
+
+  <video
+    id="ma-video"
+    class="video-js"
+    controls
+    preload="auto"
+    width="720"
+    height="400"
+    data-setup="{}">
+    <source src="https://toncdn.b-cdn.net/ma-video/ma-video.m3u8" type="application/x-mpegURL" />
+  </video>
+
+  <script src="https://vjs.zencdn.net/7.20.3/video.js"></script>
+</body>
+</html>
