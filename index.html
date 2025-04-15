@@ -1,35 +1,34 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nkrmov</title>
-  <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Top 100 IMDb - Nkrmov</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
-    <h1>Nkrmov</h1>
+    <h1>🎬 Nkrmov - Top 100 IMDb</h1>
   </header>
-
-  <main class="catalogue">
-    <div class="movie" onclick="goToPlayer('movie1')">
-      <img src="https://fr.web.img4.acsta.net/medias/nmedia/18/36/20/29/18944269.jpg" alt="Kung Fu Panda">
-      <p>Film 1</p>
-    </div>
-    <div class="movie" onclick="goToPlayer('movie2')">
-      <img src="poster2.jpg" alt="Film 2">
-      <p>Film 2</p>
-    </div>
-    <!-- Ajoute d'autres films ici -->
+  <main class="grid">
+    <!-- Extrait d'affiches (on en affichera quelques-unes, le reste peut être généré dynamiquement avec JS si tu veux) -->
+    <a href="film.html?id=1" class="card">
+      <img src="posters/shawshank.jpg" alt="The Shawshank Redemption" />
+      <p>The Shawshank Redemption (1994)</p>
+    </a>
+    <a href="film.html?id=2" class="card">
+      <img src="posters/godfather.jpg" alt="The Godfather" />
+      <p>The Godfather (1972)</p>
+    </a>
+    <a href="film.html?id=3" class="card">
+      <img src="posters/dark_knight.jpg" alt="The Dark Knight" />
+      <p>The Dark Knight (2008)</p>
+    </a>
+    <!-- Répéter pour les 100 films -->
   </main>
-
-  <script>
-    function goToPlayer(movieId) {
-      window.location.href = `player.html?movie=${movieId}`;
-    }
-  </script>
 </body>
 </html>
+
 
 

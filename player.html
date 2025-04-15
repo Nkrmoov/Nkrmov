@@ -1,78 +1,78 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nkrmov - Lecture du Film</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Film - Nkrmov</title>
   <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
+  <link rel="stylesheet" href="style.css" />
   <style>
     body {
-      margin: 0;
-      font-family: Arial, sans-serif;
       background-color: #141414;
-      color: white;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      flex-direction: column;
-    }
-
-    header {
-      background-color: #111;
-      padding: 20px;
+      color: #fff;
       text-align: center;
-      font-size: 24px;
-      font-weight: bold;
-      width: 100%;
+      padding: 50px;
     }
 
-    .player-container {
+    .video-container {
       max-width: 800px;
-      width: 100%;
-      margin-top: 20px;
+      margin: 0 auto;
+      background-color: #222;
+      border-radius: 8px;
+      padding: 10px;
     }
 
-    video {
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    .plyr__video-embed {
       width: 100%;
-      border-radius: 10px;
+      height: 450px;
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <h1>Nkrmov - Lecture du Film</h1>
-  </header>
+  <h1>🎬 Lecture du Film</h1>
 
-  <div class="player-container">
+  <div class="video-container">
+    <!-- Ici, le lecteur Plyr est intégré. L'URL de la vidéo sera ajoutée par JavaScript. -->
     <video id="player" controls>
-      <source src="" type="video/mp4" id="video-source">
-      Votre navigateur ne prend pas en charge l'élément vidéo.
+      <source id="video-source" src="" type="video/mp4">
     </video>
   </div>
 
-  <script src="https://cdn.plyr.io/3.7.8/plyr.js"></script>
+  <script src="https://cdn.plyr.io/3.7.8/plyr.polyfilled.js"></script>
   <script>
-    // Fonction pour obtenir l'ID du film depuis l'URL
+    // Récupérer l'ID du film depuis l'URL
     const urlParams = new URLSearchParams(window.location.search);
-    const movieId = urlParams.get('movie');
-    
-    // Définir la source vidéo en fonction de l'ID du film
-    let videoUrl = '';
-    if (movieId === 'movie1') {
-      videoUrl = 'movie1.mp4';  // Remplacer par la vraie source du film
-    } else if (movieId === 'movie2') {
-      videoUrl = 'movie2.mp4';  // Remplacer par la vraie source du film
+    const filmId = urlParams.get('id');
+
+    // URL de base pour les films
+    const baseUrl = "https://TON-LIEN-NGROK.ngrok-free.app"; // Remplace par ton lien Ngrok ou ton chemin local
+
+    // Films disponibles dans le Top 100 IMDb
+    const films = {
+      1: { title: "The Shawshank Redemption", video: "films/shawshank.mp4" },
+      2: { title: "The Godfather", video: "films/godfather.mp4" },
+      3: { title: "The Dark Knight", video: "films/dark_knight.mp4" },
+      // Ajouter les autres films ici
+    };
+
+    // Vérifier si l'ID du film existe dans le tableau
+    if (films[filmId]) {
+      const film = films[filmId];
+      document.title = `${film.title} - Nkrmov`;
+      document.getElementById("video-source").src = `${baseUrl}/${film.video}`;
+      const player = new Plyr('#player');
+      document.getElementById("player").load();
+    } else {
+      document.body.innerHTML = "<h1>Film non trouvé</h1>";
     }
-    
-    // Mettre à jour la source vidéo
-    const videoElement = document.getElementById('video-source');
-    videoElement.src = videoUrl;
-    
-    // Initialiser Plyr.js
-    const player = new Plyr('#player');
   </script>
-  
+
 </body>
 </html>
+
