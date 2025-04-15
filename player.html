@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nkrmov - Lecture du Film</title>
+  <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #141414;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column;
+    }
+
+    header {
+      background-color: #111;
+      padding: 20px;
+      text-align: center;
+      font-size: 24px;
+      font-weight: bold;
+      width: 100%;
+    }
+
+    .player-container {
+      max-width: 800px;
+      width: 100%;
+      margin-top: 20px;
+    }
+
+    video {
+      width: 100%;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Nkrmov - Lecture du Film</h1>
+  </header>
+
+  <div class="player-container">
+    <video id="player" controls>
+      <source src="" type="video/mp4" id="video-source">
+      Votre navigateur ne prend pas en charge l'élément vidéo.
+    </video>
+  </div>
+
+  <script src="https://cdn.plyr.io/3.7.8/plyr.js"></script>
+  <script>
+    // Fonction pour obtenir l'ID du film depuis l'URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const movieId = urlParams.get('movie');
+    
+    // Définir la source vidéo en fonction de l'ID du film
+    let videoUrl = '';
+    if (movieId === 'movie1') {
+      videoUrl = 'movie1.mp4';  // Remplacer par la vraie source du film
+    } else if (movieId === 'movie2') {
+      videoUrl = 'movie2.mp4';  // Remplacer par la vraie source du film
+    }
+    
+    // Mettre à jour la source vidéo
+    const videoElement = document.getElementById('video-source');
+    videoElement.src = videoUrl;
+    
+    // Initialiser Plyr.js
+    const player = new Plyr('#player');
+  </script>
+  
+</body>
+</html>
