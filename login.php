@@ -52,3 +52,6 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
   </main>
 </body>
 </html>
+setcookie('auth', 'true', time() + 3600, '/'); // valide pendant 1h
+header('Location: /films.html');
+exit();
