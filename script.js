@@ -99,7 +99,8 @@ const films = [
   { id: 98, title: "The Deer Hunter", year: 1978, img: "https://m.media-amazon.com/images/I/91vXzG6PlrL._AC_SY679_.jpg" },
   { id: 99, title: "The Big Sleep", year: 1946, img: "https://m.media-amazon.com/images/I/91o+xCm2FQL._AC_SY679_.jpg" },
   { id: 100, title: "Some Like It Hot", year: 1959, img: "https://m.media-amazon.com/images/I/91d6OtDQnkL._AC_SY679_.jpg" }
-);
+];
+
 function generateFilmCards() {
   const grid = document.querySelector(".grid");
 
