@@ -53,5 +53,20 @@ header h1 {
 .card:hover p {
   background-color: #111;
 }
+.card {
+  text-decoration: none; /* enlève le soulignement */
+  color: black; /* ou la couleur que tu veux */
+}
+
+.card p {
+  color: black; /* texte du titre du film */
+  margin-top: 0.5rem;
+  font-weight: bold;
+}
+
+/* Optionnel : empêche que le lien change de couleur après clic */
+.card:visited p {
+  color: black;
+}
 
 
