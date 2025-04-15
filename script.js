@@ -23,8 +23,7 @@ const films = [
   { id: 22, title: "The Silence of the Lambs", year: 1991, img: "https://m.media-amazon.com/images/I/71dd3Qe8F9L._AC_SY679_.jpg" },
   { id: 23, title: "It's a Wonderful Life", year: 1946, img: "https://m.media-amazon.com/images/I/91mCEmZDNwL._AC_SY679_.jpg" },
   { id: 24, title: "Life is Beautiful", year: 1997, img: "https://m.media-amazon.com/images/I/91cGpa8ps3L._AC_SY679_.jpg" },
-  { id: 25, title: "The Usual Suspects", year: 1995, img: "https://m.media-amazon.com/images/I/91DgI2dX8wL._AC_SY679_.jpg" }
-
+  { id: 25, title: "The Usual Suspects", year: 1995, img: "https://m.media-amazon.com/images/I/91DgI2dX8wL._AC_SY679_.jpg" },
   { id: 26, title: "The Lion King", year: 1994, img: "https://m.media-amazon.com/images/I/81yfgIhELjL._AC_SY679_.jpg" },
   { id: 27, title: "Back to the Future", year: 1985, img: "https://m.media-amazon.com/images/I/71bFCxfkpzL._AC_SY679_.jpg" },
   { id: 28, title: "The Prestige", year: 2006, img: "https://m.media-amazon.com/images/I/71b9o3zGk-L._AC_SY679_.jpg" },
@@ -49,7 +48,7 @@ const films = [
   { id: 47, title: "Spider-Man: No Way Home", year: 2021, img: "https://m.media-amazon.com/images/I/91Kj3Wwp+5L._AC_SY679_.jpg" },
   { id: 48, title: "City Lights", year: 1931, img: "https://m.media-amazon.com/images/I/91iHlydzX0L._AC_SY679_.jpg" },
   { id: 49, title: "The Breakfast Club", year: 1985, img: "https://m.media-amazon.com/images/I/71GpK6+shOL._AC_SY679_.jpg" },
-  { id: 50, title: "The Wolf of Wall Street", year: 2013, img: "https://m.media-amazon.com/images/I/91lpdPbmHrL._AC_SY679_.jpg" }
+  { id: 50, title: "The Wolf of Wall Street", year: 2013, img: "https://m.media-amazon.com/images/I/91lpdPbmHrL._AC_SY679_.jpg" },
   { id: 51, title: "Memento", year: 2000, img: "https://m.media-amazon.com/images/I/91yPY6pyd-L._AC_SY679_.jpg" },
   { id: 52, title: "The Dark Knight Returns", year: 2012, img: "https://m.media-amazon.com/images/I/91dguwZ4zjL._AC_SY679_.jpg" },
   { id: 53, title: "Good Will Hunting", year: 1997, img: "https://m.media-amazon.com/images/I/91HGt9z9L9L._AC_SY679_.jpg" },
@@ -74,7 +73,7 @@ const films = [
   { id: 72, title: "The Sound of Music", year: 1965, img: "https://m.media-amazon.com/images/I/91QQV8EzprL._AC_SY679_.jpg" },
   { id: 73, title: "Star Wars: Episode VI - Return of the Jedi", year: 1983, img: "https://m.media-amazon.com/images/I/81JXl-Yw1wL._AC_SY679_.jpg" },
   { id: 74, title: "Monty Python and the Holy Grail", year: 1975, img: "https://m.media-amazon.com/images/I/81c7jUbHmAL._AC_SY679_.jpg" },
-  { id: 75, title: "The Maltese Falcon", year: 1941, img: "https://m.media-amazon.com/images/I/91BsdjoD4dL._AC_SY679_.jpg" }
+  { id: 75, title: "The Maltese Falcon", year: 1941, img: "https://m.media-amazon.com/images/I/91BsdjoD4dL._AC_SY679_.jpg" },
   { id: 76, title: "A Beautiful Mind", year: 2001, img: "https://m.media-amazon.com/images/I/91PjtD1L5hL._AC_SY679_.jpg" },
   { id: 77, title: "The Godfather: Part II", year: 1974, img: "https://m.media-amazon.com/images/I/91Pjr94hsSL._AC_SY679_.jpg" },
   { id: 78, title: "The Terminator", year: 1984, img: "https://m.media-amazon.com/images/I/91m+Lts46nL._AC_SY679_.jpg" },
