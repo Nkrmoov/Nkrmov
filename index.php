@@ -1,3 +1,9 @@
+<?php
+// Redirection vers la page de connexion
+header('Location: login.php');
+exit();
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
