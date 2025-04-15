@@ -55,18 +55,18 @@ header h1 {
 }
 .card {
   text-decoration: none; /* enlève le soulignement */
-  color: black; /* ou la couleur que tu veux */
+  color: #e50914; /* rouge Netflix */
 }
 
 .card p {
-  color: black; /* texte du titre du film */
+  color: #e50914; /* texte du titre du film */
   margin-top: 0.5rem;
   font-weight: bold;
 }
 
-/* Optionnel : empêche que le lien change de couleur après clic */
+/* Pour que le lien ne change pas de couleur après clic */
 .card:visited p {
-  color: black;
+  color: #e50914;
 }
 
 
