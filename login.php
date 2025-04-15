@@ -14,7 +14,12 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
     // Vérifier les identifiants
     if (isset($users[$username]) && $users[$username] == $password) {
         $_SESSION['user'] = $username;
-        header('Location: index.html');  // Rediriger vers la page des films si l'authentification réussie
+
+        // 🔐 Définir un cookie "auth" pour 1 heure
+        setcookie('auth', 'true', time() + 3600, '/'); 
+
+        // Rediriger vers la page des films si l'authentification réussie
+        header('Location: index.html');  
         exit();
     } else {
         $error_message = "Identifiants invalides.";

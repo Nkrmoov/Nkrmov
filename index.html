@@ -1,3 +1,9 @@
+<script>
+  // Si l'utilisateur n'est pas authentifié (pas de cookie par exemple)
+  if (!document.cookie.includes("auth=true")) {
+    window.location.href = "login.html";
+  }
+</script>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
