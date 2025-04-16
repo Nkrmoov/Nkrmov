@@ -430,22 +430,38 @@
 </a>
 </main>
 
-  <script>
+ <script>
     const searchInput = document.getElementById('searchInput');
-    const cards = document.querySelectorAll('.card');
+    const sortSelect = document.getElementById('sortSelect');
+    const grid = document.getElementById('filmGrid');
 
+    // Recherche
     searchInput.addEventListener('input', () => {
       const query = searchInput.value.toLowerCase();
-
-      cards.forEach(card => {
+      document.querySelectorAll('.card').forEach(card => {
         const title = card.querySelector('p').textContent.toLowerCase();
         card.style.display = title.includes(query) ? 'block' : 'none';
       });
     });
+
+    // Tri
+    sortSelect.addEventListener('change', () => {
+      const cards = Array.from(document.querySelectorAll('.card'));
+      const sortedCards = cards.sort((a, b) => {
+        const titleA = a.querySelector('p').textContent.toLowerCase();
+        const titleB = b.querySelector('p').textContent.toLowerCase();
+        if (sortSelect.value === 'az') return titleA.localeCompare(titleB);
+        if (sortSelect.value === 'za') return titleB.localeCompare(titleA);
+        return 0;
+      });
+
+      // Vider et remettre dans le bon ordre
+      grid.innerHTML = '';
+      sortedCards.forEach(card => grid.appendChild(card));
+    });
   </script>
 </body>
-</html>
-
+</html
 
 
 
