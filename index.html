@@ -69,18 +69,41 @@
       font-size: 0.9rem;
       text-align: center;
     }
+	.password-wrapper {
+  position: relative;
+}
+
+.password-wrapper input {
+  padding-right: 40px; /* pour que le texte ne passe pas sous l'icône */
+}
+
+.toggle-password {
+  position: absolute;
+  right: 10px;
+  top: 12px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  color: #aaa;
+}
   </style>
 </head>
 <body>
   <h1>🔐 Connexion à Nkrmov</h1>
   <form id="loginForm">
     <input type="text" id="username" placeholder="Nom d'utilisateur" required />
-    <input type="password" id="password" placeholder="Mot de passe" required />
+    <div class="password-wrapper">
+  <input type="password" id="password" placeholder="Mot de passe" required />
+  <span class="toggle-password" onclick="togglePassword()">👁️</span>
+</div>
     <button type="submit">Se connecter</button>
     <p id="error"></p>
   </form>
 
   <script>
+  function togglePassword() {
+  const passwordField = document.getElementById("password");
+  passwordField.type = passwordField.type === "password" ? "text" : "password";
+}
     const whitelist = {
       "admin": "pass123",
       "nkr": "topfilms",
