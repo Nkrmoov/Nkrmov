@@ -5,12 +5,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Top 100 IMDb - Nkrmov</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    .search-bar {
+      margin-top: 1rem;
+    }
+
+    .search-bar input {
+      padding: 10px;
+      width: 300px;
+      max-width: 90%;
+      font-size: 1rem;
+      border: none;
+      border-radius: 5px;
+    }
+  </style>
 </head>
 <body>
   <header>
     <h1>🎬 Nkrmov - Top 100 IMDb</h1>
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="Rechercher un film...">
+    </div>
   </header>
-
   <main class="grid">
 <a href="film.html?id=1" class="card">
   <img src="https://imgs.search.brave.com/Yx73UoEm9AOuaz_NSiC32diOGGaIuG7kqNag3cE1bbA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zMy5h/bWF6b25hd3MuY29t/L25pZ2h0amFycHJv/ZC9jb250ZW50L3Vw/bG9hZHMvc2l0ZXMv/MzY2LzIwMjQvMTAv/MTYxNDU5MzYvOWNx/Tnh4MEd4RjBiZmxa/bWVTTXVMNXRuR3py/LXNjYWxlZC5qcGc" alt="The Shawshank Redemption" />
@@ -413,6 +429,20 @@
   <p>Eternal Sunshine of the Spotless Mind (2004)</p>
 </a>
 </main>
+
+  <script>
+    const searchInput = document.getElementById('searchInput');
+    const cards = document.querySelectorAll('.card');
+
+    searchInput.addEventListener('input', () => {
+      const query = searchInput.value.toLowerCase();
+
+      cards.forEach(card => {
+        const title = card.querySelector('p').textContent.toLowerCase();
+        card.style.display = title.includes(query) ? 'block' : 'none';
+      });
+    });
+  </script>
 </body>
 </html>
 
