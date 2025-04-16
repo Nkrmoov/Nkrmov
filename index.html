@@ -1,422 +1,82 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Top 100 IMDb - Nkrmov</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Connexion - Nkrmov</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #2F496E;
+      color: #F4EADE;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+    h1 {
+      color: #ED8C72;
+    }
+    form {
+      background-color: #2988BC;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    }
+    input {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 1rem;
+      border: none;
+      border-radius: 5px;
+    }
+    button {
+      background-color: #ED8C72;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    p#error {
+      color: red;
+      margin-top: 1rem;
+    }
+  </style>
 </head>
 <body>
-  <header>
-    <h1>🎬 Nkrmov - Top 100 IMDb</h1>
-  </header>
+  <h1>🔐 Connexion à Nkrmov</h1>
+  <form id="loginForm">
+    <input type="text" id="username" placeholder="Nom d'utilisateur" required />
+    <input type="password" id="password" placeholder="Mot de passe" required />
+    <button type="submit">Se connecter</button>
+    <p id="error"></p>
+  </form>
 
-  <main class="grid">
-<a href="film.html?id=1" class="card">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/a/a2/ShawshankRedemptionMoviePoster.jpg" alt="The Shawshank Redemption" />
-  <p>The Shawshank Redemption (1994)</p>
-</a>
-<a href="film.html?id=2" class="card">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/1/1c/Godfather_ver1.jpg" alt="The Godfather" />
-  <p>The Godfather (1972)</p>
-</a>
-<a href="film.html?id=3" class="card">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/Dark_Knight.jpg" alt="The Dark Knight" />
-  <p>The Dark Knight (2008)</p>
-</a>
-<a href="film.html?id=4" class="card">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/1/1e/The_Godfather_Part_II.jpg" alt="The Godfather: Part II" />
-  <p>The Godfather: Part II (1974)</p>
-</a>
-<a href="film.html?id=5" class="card">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/The_Dark_Knight_Rises_poster.jpg" alt="The Dark Knight Rises" />
-  <p>The Dark Knight Rises (2012)</p>
-</a>
-<a href="film.html?id=6" class="card">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/7/7f/12_Angry_Men_1957.jpg" alt="12 Angry Men" />
-  <p>12 Angry Men (1957)</p>
-</a>
-<a href="film.html?id=7" class="card">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/8/84/Schindler%27s_List.jpg" alt="Schindler's List" />
-  <p>Schindler's List (1993)</p>
-</a>
-<a href="film.html?id=8" class="card">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/9/9b/Pulp_Fiction_poster.jpg" alt="Pulp Fiction" />
-  <p>Pulp Fiction (1994)</p>
-</a>
-<a href="film.html?id=9" class="card">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/d/d4/Lord_of_the_Rings_The_Return_of_the_King.jpg" alt="The Lord of the Rings: The Return of the King" />
-  <p>The Lord of the Rings: The Return of the King (2003)</p>
-</a>
-<a href="film.html?id=10" class="card">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/a/ab/GoodBadUgly.jpg" alt="The Good, the Bad and the Ugly" />
-  <p>The Good, the Bad and the Ugly (1966)</p>
-</a>
-<a href="film.html?id=11" class="card">
-  <img src="https://m.media-amazon.com/images/I/51w2ONhNjyL._AC_SY679_.jpg" alt="Fight Club" />
-  <p>Fight Club (1999)</p>
-</a>
-<a href="film.html?id=12" class="card">
-  <img src="https://m.media-amazon.com/images/I/91BwPpQ7+aL._AC_SY679_.jpg" alt="Forrest Gump" />
-  <p>Forrest Gump (1994)</p>
-</a>
-<a href="film.html?id=13" class="card">
-  <img src="https://m.media-amazon.com/images/I/91WdkJQY3FL._AC_SY679_.jpg" alt="Inception" />
-  <p>Inception (2010)</p>
-</a>
-<a href="film.html?id=14" class="card">
-  <img src="https://m.media-amazon.com/images/I/91eFTtqW+AL._AC_SY679_.jpg" alt="The Empire Strikes Back" />
-  <p>The Empire Strikes Back (1980)</p>
-</a>
-<a href="film.html?id=15" class="card">
-  <img src="https://m.media-amazon.com/images/I/91gRjlKktkL._AC_SY679_.jpg" alt="The Matrix" />
-  <p>The Matrix (1999)</p>
-</a>
-<a href="film.html?id=16" class="card">
-  <img src="https://m.media-amazon.com/images/I/81oPDEOSyML._AC_SY679_.jpg" alt="Goodfellas" />
-  <p>Goodfellas (1990)</p>
-</a>
-<a href="film.html?id=17" class="card">
-  <img src="https://m.media-amazon.com/images/I/91yxv9FS8JL._AC_SY679_.jpg" alt="Star Wars" />
-  <p>Star Wars (1977)</p>
-</a>
-<a href="film.html?id=18" class="card">
-  <img src="https://m.media-amazon.com/images/I/91XHtNjEqaL._AC_SY679_.jpg" alt="One Flew Over the Cuckoo's Nest" />
-  <p>One Flew Over the Cuckoo's Nest (1975)</p>
-</a>
-<a href="film.html?id=19" class="card">
-  <img src="https://m.media-amazon.com/images/I/91ePZ7N8FQL._AC_SY679_.jpg" alt="Seven Samurai" />
-  <p>Seven Samurai (1954)</p>
-</a>
-<a href="film.html?id=20" class="card">
-  <img src="https://m.media-amazon.com/images/I/91zQbK5-N7L._AC_SY679_.jpg" alt="The Silence of the Lambs" />
-  <p>The Silence of the Lambs (1991)</p>
-</a>
-<a href="film.html?id=21" class="card">
-  <img src="https://m.media-amazon.com/images/I/81O5lgVV3yL._AC_SY679_.jpg" alt="It's a Wonderful Life" />
-  <p>It's a Wonderful Life (1946)</p>
-</a>
-<a href="film.html?id=22" class="card">
-  <img src="https://m.media-amazon.com/images/I/91wn-QE+1QL._AC_SY679_.jpg" alt="The Usual Suspects" />
-  <p>The Usual Suspects (1995)</p>
-</a>
-<a href="film.html?id=23" class="card">
-  <img src="https://m.media-amazon.com/images/I/91JlZbfaPeL._AC_SY679_.jpg" alt="Léon: The Professional" />
-  <p>Léon: The Professional (1994)</p>
-</a>
-<a href="film.html?id=24" class="card">
-  <img src="https://m.media-amazon.com/images/I/81+9elIzm6L._AC_SY679_.jpg" alt="The Pianist" />
-  <p>The Pianist (2002)</p>
-</a>
-<a href="film.html?id=25" class="card">
-  <img src="https://m.media-amazon.com/images/I/71hbKct1i0L._AC_SY679_.jpg" alt="Back to the Future" />
-  <p>Back to the Future (1985)</p>
-</a>
-<a href="film.html?id=26" class="card">
-  <img src="https://m.media-amazon.com/images/I/91j5v7+5VYL._AC_SY679_.jpg" alt="The Intouchables" />
-  <p>The Intouchables (2011)</p>
-</a>
-<a href="film.html?id=27" class="card">
-  <img src="https://m.media-amazon.com/images/I/91WkskDRtyL._AC_SY679_.jpg" alt="Modern Times" />
-  <p>Modern Times (1936)</p>
-</a>
-<a href="film.html?id=28" class="card">
-  <img src="https://m.media-amazon.com/images/I/81pfpugVjWL._AC_SY679_.jpg" alt="The Great Dictator" />
-  <p>The Great Dictator (1940)</p>
-</a>
-<a href="film.html?id=29" class="card">
-  <img src="https://m.media-amazon.com/images/I/91u4VYYyRzL._AC_SY679_.jpg" alt="The Green Mile" />
-  <p>The Green Mile (1999)</p>
-</a>
-<a href="film.html?id=30" class="card">
-  <img src="https://m.media-amazon.com/images/I/81mxt5JchGL._AC_SY679_.jpg" alt="Parasite" />
-  <p>Parasite (2019)</p>
-</a>
-<a href="film.html?id=31" class="card">
-  <img src="https://m.media-amazon.com/images/I/81e-Ut52fPL._AC_SY679_.jpg" alt="City of God" />
-  <p>City of God (2002)</p>
-</a>
-<a href="film.html?id=32" class="card">
-  <img src="https://m.media-amazon.com/images/I/91rttjDAtQL._AC_SY679_.jpg" alt="Se7en" />
-  <p>Se7en (1995)</p>
-</a>
-<a href="film.html?id=33" class="card">
-  <img src="https://m.media-amazon.com/images/I/81FZC03tT0L._AC_SY679_.jpg" alt="The Shining" />
-  <p>The Shining (1980)</p>
-</a>
-<a href="film.html?id=34" class="card">
-  <img src="https://m.media-amazon.com/images/I/91Tkl+H2IiL._AC_SY679_.jpg" alt="The Dark Knight" />
-  <p>The Dark Knight (2008)</p>
-</a>
-<a href="film.html?id=35" class="card">
-  <img src="https://m.media-amazon.com/images/I/81AlvTxq2OL._AC_SY679_.jpg" alt="The Godfather: Part III" />
-  <p>The Godfather: Part III (1990)</p>
-</a>
-<a href="film.html?id=36" class="card">
-  <img src="https://m.media-amazon.com/images/I/91tX9gdk9KL._AC_SY679_.jpg" alt="The Lion King" />
-  <p>The Lion King (1994)</p>
-</a>
-<a href="film.html?id=37" class="card">
-  <img src="https://m.media-amazon.com/images/I/91BwSPslLzL._AC_SY679_.jpg" alt="Casablanca" />
-  <p>Casablanca (1942)</p>
-</a>
-<a href="film.html?id=38" class="card">
-  <img src="https://m.media-amazon.com/images/I/91wqJ1yM3hL._AC_SY679_.jpg" alt="Schindler's List" />
-  <p>Schindler's List (1993)</p>
-</a>
-<a href="film.html?id=39" class="card">
-  <img src="https://m.media-amazon.com/images/I/91ZWALtyYoL._AC_SY679_.jpg" alt="Dr. Strangelove" />
-  <p>Dr. Strangelove (1964)</p>
-</a>
-<a href="film.html?id=40" class="card">
-  <img src="https://m.media-amazon.com/images/I/81Jxu4bFzDL._AC_SY679_.jpg" alt="The Departed" />
-  <p>The Departed (2006)</p>
-</a>
-<a href="film.html?id=41" class="card">
-  <img src="https://m.media-amazon.com/images/I/71eK8BksgOL._AC_SY679_.jpg" alt="The Prestige" />
-  <p>The Prestige (2006)</p>
-</a>
-<a href="film.html?id=42" class="card">
-  <img src="https://m.media-amazon.com/images/I/81fjsAfkQwL._AC_SY679_.jpg" alt="The Good, the Bad and the Ugly" />
-  <p>The Good, the Bad and the Ugly (1966)</p>
-</a>
-<a href="film.html?id=43" class="card">
-  <img src="https://m.media-amazon.com/images/I/81V5VOivktL._AC_SY679_.jpg" alt="Fight Club" />
-  <p>Fight Club (1999)</p>
-</a>
-<a href="film.html?id=44" class="card">
-  <img src="https://m.media-amazon.com/images/I/81C-CF7Fg3L._AC_SY679_.jpg" alt="Forrest Gump" />
-  <p>Forrest Gump (1994)</p>
-</a>
-<a href="film.html?id=45" class="card">
-  <img src="https://m.media-amazon.com/images/I/91bR-rdI+kL._AC_SY679_.jpg" alt="Inception" />
-  <p>Inception (2010)</p>
-</a>
-<a href="film.html?id=46" class="card">
-  <img src="https://m.media-amazon.com/images/I/91ZvFyaAPWL._AC_SY679_.jpg" alt="Goodfellas" />
-  <p>Goodfellas (1990)</p>
-</a>
-<a href="film.html?id=47" class="card">
-  <img src="https://m.media-amazon.com/images/I/91cHbZmbIzL._AC_SY679_.jpg" alt="The Matrix" />
-  <p>The Matrix (1999)</p>
-</a>
-<a href="film.html?id=48" class="card">
-  <img src="https://m.media-amazon.com/images/I/91ZZBL7SzJL._AC_SY679_.jpg" alt="Gladiator" />
-  <p>Gladiator (2000)</p>
-</a>
-<a href="film.html?id=49" class="card">
-  <img src="https://m.media-amazon.com/images/I/81XZxi0hxgL._AC_SY679_.jpg" alt="One Flew Over the Cuckoo's Nest" />
-  <p>One Flew Over the Cuckoo's Nest (1975)</p>
-</a>
-<a href="film.html?id=50" class="card">
-  <img src="https://m.media-amazon.com/images/I/91Go9sGc3jL._AC_SY679_.jpg" alt="The Empire Strikes Back" />
-  <p>The Empire Strikes Back (1980)</p>
-</a>
-<a href="film.html?id=51" class="card">
-  <img src="https://m.media-amazon.com/images/I/81qlUu64-ML._AC_SY679_.jpg" alt="The Silence of the Lambs" />
-  <p>The Silence of the Lambs (1991)</p>
-</a>
-<a href="film.html?id=52" class="card">
-  <img src="https://m.media-amazon.com/images/I/91pUedh0SJL._AC_SY679_.jpg" alt="The Pianist" />
-  <p>The Pianist (2002)</p>
-</a>
-<a href="film.html?id=53" class="card">
-  <img src="https://m.media-amazon.com/images/I/91btEHWt7dL._AC_SY679_.jpg" alt="The Shining" />
-  <p>The Shining (1980)</p>
-</a>
-<a href="film.html?id=54" class="card">
-  <img src="https://m.media-amazon.com/images/I/91UybmTf89L._AC_SY679_.jpg" alt="The Godfather Part II" />
-  <p>The Godfather Part II (1974)</p>
-</a>
-<a href="film.html?id=55" class="card">
-  <img src="https://m.media-amazon.com/images/I/91GGdMtk0hL._AC_SY679_.jpg" alt="The Dark Knight Rises" />
-  <p>The Dark Knight Rises (2012)</p>
-</a>
-<a href="film.html?id=56" class="card">
-  <img src="https://m.media-amazon.com/images/I/91XM0iL5WjL._AC_SY679_.jpg" alt="The Matrix Reloaded" />
-  <p>The Matrix Reloaded (2003)</p>
-</a>
-<a href="film.html?id=57" class="card">
-  <img src="https://m.media-amazon.com/images/I/91qJdJgLkVL._AC_SY679_.jpg" alt="The Terminator" />
-  <p>The Terminator (1984)</p>
-</a>
-<a href="film.html?id=58" class="card">
-  <img src="https://m.media-amazon.com/images/I/91U5GiHzSML._AC_SY679_.jpg" alt="Star Wars: A New Hope" />
-  <p>Star Wars: A New Hope (1977)</p>
-</a>
-<a href="film.html?id=59" class="card">
-  <img src="https://m.media-amazon.com/images/I/91F6gU9acjL._AC_SY679_.jpg" alt="The Big Lebowski" />
-  <p>The Big Lebowski (1998)</p>
-</a>
-<a href="film.html?id=60" class="card">
-  <img src="https://m.media-amazon.com/images/I/91pZPyHl6DL._AC_SY679_.jpg" alt="12 Angry Men" />
-  <p>12 Angry Men (1957)</p>
-</a>
-<a href="film.html?id=61" class="card">
-  <img src="https://m.media-amazon.com/images/I/91nrbw-W9zL._AC_SY679_.jpg" alt="The Departed" />
-  <p>The Departed (2006)</p>
-</a>
-<a href="film.html?id=62" class="card">
-  <img src="https://m.media-amazon.com/images/I/91+n--2iqjL._AC_SY679_.jpg" alt="The Lion King" />
-  <p>The Lion King (1994)</p>
-</a>
-<a href="film.html?id=63" class="card">
-  <img src="https://m.media-amazon.com/images/I/91eA1lgOgeL._AC_SY679_.jpg" alt="Back to the Future" />
-  <p>Back to the Future (1985)</p>
-</a>
-<a href="film.html?id=64" class="card">
-  <img src="https://m.media-amazon.com/images/I/81ZRLfO9JwL._AC_SY679_.jpg" alt="Memento" />
-  <p>Memento (2000)</p>
-</a>
-<a href="film.html?id=65" class="card">
-  <img src="https://m.media-amazon.com/images/I/91gK3+0LC6L._AC_SY679_.jpg" alt="The Green Mile" />
-  <p>The Green Mile (1999)</p>
-</a>
-<a href="film.html?id=66" class="card">
-  <img src="https://m.media-amazon.com/images/I/91nR8Vo0pAL._AC_SY679_.jpg" alt="City of God" />
-  <p>City of God (2002)</p>
-</a>
-<a href="film.html?id=67" class="card">
-  <img src="https://m.media-amazon.com/images/I/91K9+k+xHeL._AC_SY679_.jpg" alt="Se7en" />
-  <p>Se7en (1995)</p>
-</a>
-<a href="film.html?id=68" class="card">
-  <img src="https://m.media-amazon.com/images/I/91pQXlK4bpL._AC_SY679_.jpg" alt="It's a Wonderful Life" />
-  <p>It's a Wonderful Life (1946)</p>
-</a>
-<a href="film.html?id=69" class="card">
-  <img src="https://m.media-amazon.com/images/I/91+rgt+GBdL._AC_SY679_.jpg" alt="Casablanca" />
-  <p>Casablanca (1942)</p>
-</a>
-<a href="film.html?id=70" class="card">
-  <img src="https://m.media-amazon.com/images/I/91cTrZZlX0L._AC_SY679_.jpg" alt="Good Will Hunting" />
-  <p>Good Will Hunting (1997)</p>
-</a>
-<a href="film.html?id=71" class="card">
-  <img src="https://m.media-amazon.com/images/I/91IEt5gMLML._AC_SY679_.jpg" alt="The Great Escape" />
-  <p>The Great Escape (1963)</p>
-</a>
-<a href="film.html?id=72" class="card">
-  <img src="https://m.media-amazon.com/images/I/91Hn5yb5+vL._AC_SY679_.jpg" alt="Léon: The Professional" />
-  <p>Léon: The Professional (1994)</p>
-</a>
-<a href="film.html?id=73" class="card">
-  <img src="https://m.media-amazon.com/images/I/91bHs3XQpaL._AC_SY679_.jpg" alt="The Seventh Seal" />
-  <p>The Seventh Seal (1957)</p>
-</a>
-<a href="film.html?id=74" class="card">
-  <img src="https://m.media-amazon.com/images/I/91eEu6ZLRbL._AC_SY679_.jpg" alt="The Usual Suspects" />
-  <p>The Usual Suspects (1995)</p>
-</a>
-<a href="film.html?id=75" class="card">
-  <img src="https://m.media-amazon.com/images/I/81Tw7c5ipdL._AC_SY679_.jpg" alt="The Shining" />
-  <p>The Shining (1980)</p>
-</a>
-<a href="film.html?id=76" class="card">
-  <img src="https://m.media-amazon.com/images/I/91o3ktk9-7L._AC_SY679_.jpg" alt="Inglourious Basterds" />
-  <p>Inglourious Basterds (2009)</p>
-</a>
-<a href="film.html?id=77" class="card">
-  <img src="https://m.media-amazon.com/images/I/81hUOD+d7eL._AC_SY679_.jpg" alt="The Big Lebowski" />
-  <p>The Big Lebowski (1998)</p>
-</a>
-<a href="film.html?id=78" class="card">
-  <img src="https://m.media-amazon.com/images/I/91aEbHh0fYL._AC_SY679_.jpg" alt="The Princess Bride" />
-  <p>The Princess Bride (1987)</p>
-</a>
-<a href="film.html?id=79" class="card">
-  <img src="https://m.media-amazon.com/images/I/91Lx65FOn4L._AC_SY679_.jpg" alt="The Social Network" />
-  <p>The Social Network (2010)</p>
-</a>
-<a href="film.html?id=80" class="card">
-  <img src="https://m.media-amazon.com/images/I/91Hp4A31vnL._AC_SY679_.jpg" alt="The Lives of Others" />
-  <p>The Lives of Others (2006)</p>
-</a>
-<a href="film.html?id=81" class="card">
-  <img src="https://m.media-amazon.com/images/I/91+c+xk5rfL._AC_SY679_.jpg" alt="The Pianist" />
-  <p>The Pianist (2002)</p>
-</a>
-<a href="film.html?id=82" class="card">
-  <img src="https://m.media-amazon.com/images/I/91-WY0V1a7L._AC_SY679_.jpg" alt="The Breakfast Club" />
-  <p>The Breakfast Club (1985)</p>
-</a>
-<a href="film.html?id=83" class="card">
-  <img src="https://m.media-amazon.com/images/I/91gUuTqP27L._AC_SY679_.jpg" alt="The Wolf of Wall Street" />
-  <p>The Wolf of Wall Street (2013)</p>
-</a>
-<a href="film.html?id=84" class="card">
-  <img src="https://m.media-amazon.com/images/I/91cnRrKq0GL._AC_SY679_.jpg" alt="Gladiator" />
-  <p>Gladiator (2000)</p>
-</a>
-<a href="film.html?id=85" class="card">
-  <img src="https://m.media-amazon.com/images/I/91VRAjU+d9L._AC_SY679_.jpg" alt="The Dark Knight Rises" />
-  <p>The Dark Knight Rises (2012)</p>
-</a>
-<a href="film.html?id=86" class="card">
-  <img src="https://m.media-amazon.com/images/I/91M4tq67-rL._AC_SY679_.jpg" alt="Requiem for a Dream" />
-  <p>Requiem for a Dream (2000)</p>
-</a>
-<a href="film.html?id=87" class="card">
-  <img src="https://m.media-amazon.com/images/I/91yD0Bz5r5L._AC_SY679_.jpg" alt="The Truman Show" />
-  <p>The Truman Show (1998)</p>
-</a>
-<a href="film.html?id=88" class="card">
-  <img src="https://m.media-amazon.com/images/I/91LgE2dK6DL._AC_SY679_.jpg" alt="Trainspotting" />
-  <p>Trainspotting (1996)</p>
-</a>
-<a href="film.html?id=89" class="card">
-  <img src="https://m.media-amazon.com/images/I/91M7m9jbbUL._AC_SY679_.jpg" alt="Jaws" />
-  <p>Jaws (1975)</p>
-</a>
-<a href="film.html?id=90" class="card">
-  <img src="https://m.media-amazon.com/images/I/91fGBw+ykfL._AC_SY679_.jpg" alt="The Thing" />
-  <p>The Thing (1982)</p>
-</a>
-<a href="film.html?id=91" class="card">
-  <img src="https://m.media-amazon.com/images/I/91jdT0UBnxL._AC_SY679_.jpg" alt="Apocalypse Now" />
-  <p>Apocalypse Now (1979)</p>
-</a>
-<a href="film.html?id=92" class="card">
-  <img src="https://m.media-amazon.com/images/I/91Dd+K9RntL._AC_SY679_.jpg" alt="The Deer Hunter" />
-  <p>The Deer Hunter (1978)</p>
-</a>
-<a href="film.html?id=93" class="card">
-  <img src="https://m.media-amazon.com/images/I/91v4-f3pWqL._AC_SY679_.jpg" alt="Scarface" />
-  <p>Scarface (1983)</p>
-</a>
-<a href="film.html?id=94" class="card">
-  <img src="https://m.media-amazon.com/images/I/91dtU9zk3tL._AC_SY679_.jpg" alt="Chinatown" />
-  <p>Chinatown (1974)</p>
-</a>
-<a href="film.html?id=95" class="card">
-  <img src="https://m.media-amazon.com/images/I/91Xvqj3szlL._AC_SY679_.jpg" alt="The Grand Budapest Hotel" />
-  <p>The Grand Budapest Hotel (2014)</p>
-</a>
-<a href="film.html?id=96" class="card">
-  <img src="https://m.media-amazon.com/images/I/91JrtF5PlbL._AC_SY679_.jpg" alt="The Revenant" />
-  <p>The Revenant (2015)</p>
-</a>
-<a href="film.html?id=97" class="card">
-  <img src="https://m.media-amazon.com/images/I/91+DLf2vhGL._AC_SY679_.jpg" alt="The Silence of the Lambs" />
-  <p>The Silence of the Lambs (1991)</p>
-</a>
-<a href="film.html?id=98" class="card">
-  <img src="https://m.media-amazon.com/images/I/91rWwAq67KL._AC_SY679_.jpg" alt="No Country for Old Men" />
-  <p>No Country for Old Men (2007)</p>
-</a>
-<a href="film.html?id=99" class="card">
-  <img src="https://m.media-amazon.com/images/I/91lRfyYZbTL._AC_SY679_.jpg" alt="Django Unchained" />
-  <p>Django Unchained (2012)</p>
-</a>
-<a href="film.html?id=100" class="card">
-  <img src="https://m.media-amazon.com/images/I/91biVA+zNmL._AC_SY679_.jpg" alt="The Dark Knight" />
-  <p>The Dark Knight (2008)</p>
-</a>
-</main>
+  <script>
+    const whitelist = {
+      "admin": "pass123",
+      "nkr": "topfilms",
+      "invite": "test123"
+    };
+
+    document.getElementById("loginForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      const username = document.getElementById("username").value;
+      const password = document.getElementById("password").value;
+
+      if (whitelist[username] && whitelist[username] === password) {
+        // Authentification réussie
+        localStorage.setItem("authenticated", "true");
+        window.location.href = "index.html"; // redirection vers ton site
+      } else {
+        document.getElementById("error").textContent = "Identifiants incorrects.";
+      }
+    });
+  </script>
 </body>
 </html>
-
-
-
-
-
