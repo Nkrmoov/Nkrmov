@@ -50,12 +50,11 @@
     const urlParams = new URLSearchParams(window.location.search);
     const filmId = urlParams.get('id');
 
-    // URL de base pour les films
-    const baseUrl = " https://3e62-89-38-99-119.ngrok-free.app"; // Remplace par ton lien Ngrok ou ton chemin local
+    // Extrait :
+const baseUrl = "https://3e62-89-38-99-119.ngrok-free.app";
 
-    // Films disponibles dans le Top 100 IMDb
-    const films = {
-      1: { title: "The Shawshank Redemption", video: "films/the-shawshank-redemption" },
+const films = {
+  1: { title: "The Shawshank Redemption", video: "films/the-shawshank-redemption.mp4" }
 2: { title: "The Godfather", video: "" },
 3: { title: "The Dark Knight", video: "" },
 4: { title: "The Godfather: Part II", video: "" },
